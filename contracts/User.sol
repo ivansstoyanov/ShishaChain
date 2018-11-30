@@ -1,6 +1,6 @@
 pragma solidity ^0.4.25;
 
-import "node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol";
+import "../node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol";
 
 contract User is Ownable {
 
@@ -16,6 +16,9 @@ contract User is Ownable {
     // constructor(address _contractOwner) public {
     //     contractOwner = _contractOwner;
     // }
+
+    //todo change image
+    //todo change username
 
     modifier onlyNewFriends(address _friendAddress) {
         require(friendList[msg.sender][_friendAddress] == false, "Already friends");
